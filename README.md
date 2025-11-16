@@ -1,4 +1,4 @@
-# 📘 Fine-Tuning LLMs — Complete Guide
+# 📘 Fine-Tuning LLMs
 
 ## 🔍 What Is Fine-Tuning?
 
@@ -50,10 +50,9 @@ But RAG does **not** change the model’s internal behavior.
 
 Updates **all** model parameters.
 
-\[
-	heta_{new} = 	heta_{old} - \eta \cdot 
-abla_	heta L(x,y)
-\]
+$$
+\theta_{\text{new}} = \theta_{\text{old}} - \eta \cdot \nabla_\theta \mathcal{L}(x, y)
+$$
 
 ---
 
@@ -102,16 +101,17 @@ QLoRA quantizes the base model to **4-bit NF4** to drastically reduce memory usa
 
 # 📐 Math Behind Fine-Tuning
 
-\[
-\hat{y} = f(x; 	heta)
-\]
-\[
-L = - \sum y \log(\hat{y})
-\]
-\[
-	heta = 	heta - \eta 
-abla_	heta L
-\]
+$$
+\hat{y} = f(x;\theta)
+$$
+
+$$
+\mathcal{L} = - \sum y \log(\hat{y})
+$$
+
+$$
+\theta = \theta - \eta \nabla_\theta \mathcal{L}
+$$
 
 ---
 
